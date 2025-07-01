@@ -117,13 +117,13 @@ const AIDetection = () => {
       if (file) {
         const formData = new FormData();
         formData.append('file', file);
-        response = await axios.post('http://localhost:5000/api/detect-ai', formData, {
+        response = await axios.post('https://plagiarism-ai-detector-backend.onrender.com/api/detect-ai', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
         });
       } else {
-        response = await axios.post('http://localhost:5000/api/detect-ai', { text }, {
+        response = await axios.post('https://plagiarism-ai-detector-backend.onrender.com/api/detect-ai', { text }, {
           headers: {
             'Content-Type': 'application/json',
           },

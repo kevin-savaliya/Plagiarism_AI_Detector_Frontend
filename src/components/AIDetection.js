@@ -31,7 +31,7 @@ function AIDetection() {
     setResult(null);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/ai-detection', {
+      const response = await axios.post('https://plagiarism-ai-detector-backend.onrender.com/api/ai-detection', {
         text,
       });
       setResult(response.data);

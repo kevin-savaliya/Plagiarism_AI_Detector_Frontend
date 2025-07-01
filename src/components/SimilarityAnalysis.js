@@ -25,7 +25,7 @@ function SimilarityAnalysis() {
     setResult(null);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/similarity', {
+      const response = await axios.post('https://plagiarism-ai-detector-backend.onrender.com/api/similarity', {
         text1,
         text2,
       });
